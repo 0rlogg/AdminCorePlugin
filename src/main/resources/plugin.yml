@@ -1,0 +1,13 @@
+name: AdminCore
+version: '${project.version}'
+main: me.orlogg.admincore.AdminCore
+api-version: 1.19
+commands:
+  Vanish:
+    description: Makes the player invisible.
+  Repair:
+    description: Repairs an item that is in the secondary hand.
+    aliases:
+      - fix
+      - itemfix
+      - ifix
