@@ -1,6 +1,6 @@
 package me.orlogg.admincore;
 
-import me.orlogg.admincore.Commands.FrozenCommand;
+import me.orlogg.admincore.Commands.FreezeCommand;
 import me.orlogg.admincore.Commands.RepairCommand;
 import me.orlogg.admincore.Commands.VanishCommand;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -13,7 +13,7 @@ public final class AdminCore extends JavaPlugin {
 
         getCommand("Vanish").setExecutor(new VanishCommand());
         getCommand("Repair").setExecutor(new RepairCommand());
-        getCommand("Freeze").setExecutor(new FrozenCommand());
+        getCommand("Repair").setExecutor(new FreezeCommand());
 
     }
 }
