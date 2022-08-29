@@ -20,6 +20,8 @@ public class FreezeCommand implements CommandExecutor {
 
             }else {
                 target.setWalkSpeed(0);
+                target.setCanPickupItems(false);
+                target.setSneaking(false);
             }
 
 
