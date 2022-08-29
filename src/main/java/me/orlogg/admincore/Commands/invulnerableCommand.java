@@ -8,19 +8,19 @@ import org.bukkit.entity.Player;
 
 import java.util.Objects;
 
-public class FlyCommand implements CommandExecutor {
+public class invulnerableCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-
         if (sender instanceof Player player && player.isOp()) {
-            if (Objects.requireNonNull(player.getPlayer()).getAllowFlight()) {
-                player.getPlayer().setAllowFlight(false);
-                player.sendMessage(ChatColor.RED + "Now you can't fly.");
+
+            if (player.isInvulnerable()) {
+                Objects.requireNonNull(player.getPlayer()).setInvulnerable(false);
+                player.sendMessage(ChatColor.RED + "Now you aren't invulnerable.");
 
             } else {
-                player.getPlayer().setAllowFlight(true);
-                player.sendMessage(ChatColor.GREEN + "Now you can fly.");
+                Objects.requireNonNull(player.getPlayer()).setInvulnerable(true);
+                player.sendMessage(ChatColor.GREEN + "Now you are invulnerable.");
             }
         }
         return true;

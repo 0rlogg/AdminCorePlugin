@@ -13,3 +13,9 @@ commands:
       - ifix
   Freeze:
     description: a
+  Fly:
+    description: a
+  Invulnerable:
+    description: a
+    aliases:
+      - god
