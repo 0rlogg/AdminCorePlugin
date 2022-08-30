@@ -1,9 +1,6 @@
 package me.orlogg.admincore;
 
-import me.orlogg.admincore.Commands.FlyCommand;
-import me.orlogg.admincore.Commands.RepairCommand;
-import me.orlogg.admincore.Commands.VanishCommand;
-import me.orlogg.admincore.Commands.invulnerableCommand;
+import me.orlogg.admincore.Commands.*;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class AdminCore extends JavaPlugin {
@@ -16,6 +13,8 @@ public final class AdminCore extends JavaPlugin {
         getCommand("Repair").setExecutor(new RepairCommand());
         getCommand("Fly").setExecutor(new FlyCommand());
         getCommand("Invulnerable").setExecutor(new invulnerableCommand());
+        getCommand("Freeze").setExecutor(new FreezeCommand());
+        //getCommand("UnFreeze").setExecutor(new UnFreezeCommand());
 
     }
 }
